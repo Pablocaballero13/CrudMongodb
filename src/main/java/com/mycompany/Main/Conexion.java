@@ -20,7 +20,7 @@ public class Conexion {
 public static MongoDatabase getDatabase() {
     if (mongoClient == null) {
         mongoClient = MongoClients.create(URI);
-        System.out.println("✅ Conexión a MongoDB establecida.");
+        System.out.println("Conexión a MongoDB establecida.");
     }
     return mongoClient.getDatabase(DATABASE);
 }
@@ -28,7 +28,7 @@ public static MongoDatabase getDatabase() {
     public static void cerrarConexion() {
         if (mongoClient != null) {
             mongoClient.close();
-            System.out.println("🔌 Conexión cerrada.");
+            System.out.println("Conexión cerrada.");
         }
     }
 }
